@@ -25,7 +25,8 @@
 .skin-black .main-header > .navbar .nav > li > a:focus,
 .skin-black .main-header > .navbar .nav .open > a,
 .skin-black .main-header > .navbar .nav .open > a:hover,
-.skin-black .main-header > .navbar .nav .open > a:focus {
+.skin-black .main-header > .navbar .nav .open > a:focus,
+.skin-black .main-header > .navbar .nav > .active > a {
   background: #ffffff;
   color: #999999;
 }
@@ -51,21 +52,21 @@
 .skin-black .main-header > .logo {
   background-color: #ffffff;
   color: #333333;
-  border-bottom: 0px solid transparent;
+  border-bottom: 0 solid transparent;
   border-right: 1px solid #eee;
 }
 .skin-black .main-header > .logo:hover {
-  background: #fcfcfc;
+  background-color: #fcfcfc;
 }
 @media (max-width: 767px) {
   .skin-black .main-header > .logo {
     background-color: #222222;
     color: #ffffff;
-    border-bottom: 0px solid transparent;
+    border-bottom: 0 solid transparent;
     border-right: none;
   }
   .skin-black .main-header > .logo:hover {
-    background: #1f1f1f;
+    background-color: #1f1f1f;
   }
 }
 .skin-black .main-header li.user-header {
@@ -90,7 +91,6 @@
 }
 .skin-black .sidebar-menu > li > a {
   border-left: 3px solid transparent;
-  margin-right: 1px;
 }
 .skin-black .sidebar-menu > li:hover > a,
 .skin-black .sidebar-menu > li.active > a {
@@ -132,10 +132,10 @@
 }
 .skin-black .sidebar-form input[type="text"] {
   color: #666;
-  border-top-left-radius: 2px !important;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 2px !important;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
 }
 .skin-black .sidebar-form input[type="text"]:focus,
 .skin-black .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
@@ -147,8 +147,8 @@
 }
 .skin-black .sidebar-form .btn {
   color: #999;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 2px !important;
-  border-bottom-right-radius: 2px !important;
-  border-bottom-left-radius: 0 !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
 }

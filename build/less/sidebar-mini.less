@@ -13,15 +13,15 @@
       .content-wrapper,
       .right-side,
       .main-footer {
-        margin-left: 50px!important;
+        margin-left: 50px !important;
         z-index: 840;
       }
 
-      //Modify the sidbar to shrink instead of disappearing
+      //Modify the sidebar to shrink instead of disappearing
       .main-sidebar {
         //Don't go away! Just shrink
         .translate(0, 0);
-        width: 50px!important;
+        width: 50px !important;
         z-index: 850;
       }
 
@@ -51,11 +51,11 @@
           //Show menu items on hover
           &:hover {
             > a {
-              overflow: visible;
+              //overflow: visible;
             }
             > a > span:not(.pull-right),
             > .treeview-menu {
-              display: block!important;
+              display: block !important;
               position: absolute;
               width: @sidebar-width - 50;
               left: 50px;
@@ -76,19 +76,20 @@
         }
       }
 
-      //Make the sidebar links, menus, labels, badeges
+      //Make the sidebar links, menus, labels, badges
       //and angle icons disappear
       .main-sidebar .user-panel > .info,
       .sidebar-form,
       .sidebar-menu > li > a > span,
       .sidebar-menu > li > .treeview-menu,
-      .sidebar-menu >li > a > .pull-right,
+      .sidebar-menu > li > a > .pull-right,
       .sidebar-menu li.header {
-        display: none!important;
+        display: none !important;
+        -webkit-transform: translateZ(0);
       }
 
       .main-header {
-        //Lets make the logo also shrink and the mini logo to appear
+        //Let's make the logo also shrink and the mini logo to appear
         .logo {
           width: 50px;
           > .logo-mini {
@@ -112,17 +113,23 @@
 }
 
 //A fix for text overflow while transitioning from sidebar mini to full sidebar
-.sidebar-menu li > a,
+.sidebar-menu,
 .main-sidebar .user-panel,
 .sidebar-menu > li.header {
-  white-space: nowrap!important;
+  white-space: nowrap;
   overflow: hidden;
 }
+
+.sidebar-menu:hover {
+  overflow: visible;
+}
+
 .sidebar-form,
 .sidebar-menu > li.header {
   overflow: hidden;
   text-overflow: clip;
 }
+
 .sidebar-menu li > a {
   position: relative;
   > .pull-right {
